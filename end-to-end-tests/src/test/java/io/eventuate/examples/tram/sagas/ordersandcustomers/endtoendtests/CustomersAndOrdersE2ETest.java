@@ -68,7 +68,7 @@ public class CustomersAndOrdersE2ETest{
       order = getOrderResponseEntity.getBody();
       if (order.getOrderState() == expectedState)
         break;
-      TimeUnit.MILLISECONDS.sleep(400);
+      TimeUnit.MILLISECONDS.sleep(1000);
     }
 
     Assert.assertEquals(expectedState, order.getOrderState());
